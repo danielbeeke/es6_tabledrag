@@ -1,0 +1,5 @@
+name: ES6 Tabledrag replacement
+description: A modern tabeldrag variant that supports validation rules.
+
+type: module
+core: 8.x
