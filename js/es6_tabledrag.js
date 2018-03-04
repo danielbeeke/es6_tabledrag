@@ -34,6 +34,13 @@
 
         Drupal.behaviors.tableDrag.hideFieldCells(table, tableSettings);
         Drupal.behaviors.tableDrag.addDataAttributes(table, tableSettings);
+
+        let editSettingsEvent = new CustomEvent('editSettings', {
+          detail: tableSettings
+        });
+
+        table.dispatchEvent(editSettingsEvent);
+
         Drupal.tableDrag[tableId] = new TableDrag(table, tableSettings);
 
         table.addEventListener('change', () => {
